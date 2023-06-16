@@ -1,0 +1,405 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://www.youtube.com/s/desktop/3515f74b/img/favicon.ico" type="image/x-icon">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="/css/watch.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Youtube</title>
+
+</head>
+
+<body>
+    <!-- Header Starts -->
+    <div class="header">
+        <div class="header__left">
+            <i id="menu" class="material-icons">menu</i>
+            <a href="/"><img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"
+                    alt="" /></a>
+        </div>
+
+        <div class="header__search">
+            <form action="">
+                <input type="text" placeholder="Search" />
+                <button><i class="material-icons">search</i></button>
+            </form>
+        </div>
+
+        <div class="header__icons">
+            <i class="material-icons display-this">search</i>
+            <i class="material-icons">videocam</i>
+            <i class="material-icons">apps</i>
+            <i class="material-icons">notifications</i>
+            <i class="material-icons display-this">account_circle</i>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    <!-- Main Body Starts -->
+    <div class="row p-0 m-0">
+        <div class="col-12 mt-2" style="padding: 0 2.5em">
+            <div class="row mr-0 pb-4">
+                <div class="col-9 pl-0">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 p-0">
+                            <video controls width="100%"  id="videoPlayer">
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col-12 pt-3 px-0">
+                            <h5 id="videTitle"></h5>
+                            <div class="row pt-1">
+                                <div class="col-5 d-flex justify-content-start">
+                                    <img src="" alt="Avatar" class="rounded-circle" height="35px"  id="videChannelIcon">
+                                    <div class="d-flex align-items-start flex-column ml-2">
+                                        <strong style="font-size: .85em;" id="videChannelName"></strong>
+                                        <p class="text-secondary my-0" style="font-size: .75em;">10 jt subcriber</p>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-dark font-weight-bold ml-3" style="border-radius: 5em;padding-left: 1em;padding-right: 1em;font-size: .8em">Subscribe</button>
+                                </div>
+                                <div class="col-7 d-flex justify-content-end">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn bg-grey d-flex align-items-center font-weight-bold" style="border-radius: 5em 0 0 5em;font-size: .8em">
+                                            <span class="material-icons text-dark mr-1" style="font-size: 1.3em;">thumb_up</span>
+                                            28rb
+                                        </button>
+                                        <button type="button" class="btn bg-grey" style="border-radius: 0 5em 5em 0;font-size: .8em">
+                                            <span class="material-icons text-dark mr-1" style="font-size: 1.3em;">thumb_down</span>
+                                        </button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm bg-grey font-weight-bold ml-3 d-flex align-items-center" style="border-radius: 5em;padding-left: 1em;padding-right: 1em;font-size: .8em">
+                                        <span class="material-icons text-dark mr-1" style="font-size: 1.3em;">share</span>
+                                        Bagikan
+                                    </button>
+                                    <button type="button" class="btn btn-sm bg-grey font-weight-bold ml-3 d-flex align-items-center" style="border-radius: 5em;padding-left: 1em;padding-right: 1em;font-size: .8em">
+                                        <span class="material-icons text-dark mr-1" style="font-size: 1.3em;">download</span>
+                                        Download
+                                    </button>
+                                    <button type="button" class="btn btn-sm bg-grey font-weight-bold ml-3 d-flex align-items-center" style="border-radius: 5em;padding-left: 1em;padding-right: 1em;font-size: .8em">
+                                        <span class="material-icons text-dark" style="font-size: 1.3em;">more_horiz</span>
+                                    </button>
+                                </div>
+                                <div class="col-12 pt-3">
+                                    <div class="card bg-grey" style="border-radius: .5em;overflow: hidden;border: none;">
+                                        <div class="card-body px-3 p-2" style="font-size: .8em;">
+                                            <span class="font-weight-bold" id="videoView">200M</span> &nbsp; 
+                                            <span class="font-weight-bold" id="videoDate">1 bulan yang lalu</span>
+                                            <p class="mb-0 mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, dicta rerum. Velit ipsam blanditiis eveniet dicta quia quisquam deleniti pariatur, iusto a aut! Veritatis asperiores est pariatur voluptates harum illo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-start align-items-center mt-3 mb-2">
+                                    <img src="https://yt3.ggpht.com/ZqDuYMGIahUkyQ_NadOV_oy8OrxFpBI3YHpJOQYHoUmXeJT-66aPW-UB7H_q6fjcNhkBQqZc=s48-c-k-c0x00ffffff-no-rj" alt="Avatar" class="rounded-circle" height="35px">
+                                    <div class="form-group ml-3" style="width: 100%">
+                                        <input type="text" id="name" required style="width: 100%">
+                                        <label for="name">Tambahkan komentar ...</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-start align-items-start pt-0 mb-2">
+                                    <img src="https://yt3.ggpht.com/ZqDuYMGIahUkyQ_NadOV_oy8OrxFpBI3YHpJOQYHoUmXeJT-66aPW-UB7H_q6fjcNhkBQqZc=s48-c-k-c0x00ffffff-no-rj" alt="Avatar" class="rounded-circle mt-2" height="35px">
+                                    <div class="d-flex align-items-start flex-column ml-3">
+                                        <div>
+                                            <strong style="font-size: .75em;">Gilang Fajar</strong> <span class="small" style="font-size: .75em;">1 hari yang lalu</span>
+                                        </div>
+                                        <p class="mb-1" style="font-size: .85em;">baik banget saunders. kalau dimari mah mana mungkin ngaku salah wkkw</p>
+                                        <div class="d-flex justify-content-start">
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-0">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_up</span> <span style="font-size: .9em;">87</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-1 ml-1">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_down</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm" style="font-size: .8em;font-weight: 500;">
+                                                Balas
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-start align-items-start pt-0 mb-2">
+                                    <img src="https://yt3.ggpht.com/ZqDuYMGIahUkyQ_NadOV_oy8OrxFpBI3YHpJOQYHoUmXeJT-66aPW-UB7H_q6fjcNhkBQqZc=s48-c-k-c0x00ffffff-no-rj" alt="Avatar" class="rounded-circle mt-2" height="35px">
+                                    <div class="d-flex align-items-start flex-column ml-3">
+                                        <div>
+                                            <strong style="font-size: .75em;">Gilang Fajar</strong> <span class="small" style="font-size: .75em;">1 hari yang lalu</span>
+                                        </div>
+                                        <p class="mb-1" style="font-size: .85em;">baik banget saunders. kalau dimari mah mana mungkin ngaku salah wkkw</p>
+                                        <div class="d-flex justify-content-start">
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-0">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_up</span> <span style="font-size: .9em;">87</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-1 ml-1">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_down</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm" style="font-size: .8em;font-weight: 500;">
+                                                Balas
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-start align-items-start pt-0 mb-2">
+                                    <img src="https://yt3.ggpht.com/ZqDuYMGIahUkyQ_NadOV_oy8OrxFpBI3YHpJOQYHoUmXeJT-66aPW-UB7H_q6fjcNhkBQqZc=s48-c-k-c0x00ffffff-no-rj" alt="Avatar" class="rounded-circle mt-2" height="35px">
+                                    <div class="d-flex align-items-start flex-column ml-3">
+                                        <div>
+                                            <strong style="font-size: .75em;">Gilang Fajar</strong> <span class="small" style="font-size: .75em;">1 hari yang lalu</span>
+                                        </div>
+                                        <p class="mb-1" style="font-size: .85em;">baik banget saunders. kalau dimari mah mana mungkin ngaku salah wkkw</p>
+                                        <div class="d-flex justify-content-start">
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-0">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_up</span> <span style="font-size: .9em;">87</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-1 ml-1">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_down</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm" style="font-size: .8em;font-weight: 500;">
+                                                Balas
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-start align-items-start pt-0 mb-2">
+                                    <img src="https://yt3.ggpht.com/ZqDuYMGIahUkyQ_NadOV_oy8OrxFpBI3YHpJOQYHoUmXeJT-66aPW-UB7H_q6fjcNhkBQqZc=s48-c-k-c0x00ffffff-no-rj" alt="Avatar" class="rounded-circle mt-2" height="35px">
+                                    <div class="d-flex align-items-start flex-column ml-3">
+                                        <div>
+                                            <strong style="font-size: .75em;">Gilang Fajar</strong> <span class="small" style="font-size: .75em;">1 hari yang lalu</span>
+                                        </div>
+                                        <p class="mb-1" style="font-size: .85em;">baik banget saunders. kalau dimari mah mana mungkin ngaku salah wkkw</p>
+                                        <div class="d-flex justify-content-start">
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-0">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_up</span> <span style="font-size: .9em;">87</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-1 ml-1">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_down</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm" style="font-size: .8em;font-weight: 500;">
+                                                Balas
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-start align-items-start pt-0 mb-2">
+                                    <img src="https://yt3.ggpht.com/ZqDuYMGIahUkyQ_NadOV_oy8OrxFpBI3YHpJOQYHoUmXeJT-66aPW-UB7H_q6fjcNhkBQqZc=s48-c-k-c0x00ffffff-no-rj" alt="Avatar" class="rounded-circle mt-2" height="35px">
+                                    <div class="d-flex align-items-start flex-column ml-3">
+                                        <div>
+                                            <strong style="font-size: .75em;">Gilang Fajar</strong> <span class="small" style="font-size: .75em;">1 hari yang lalu</span>
+                                        </div>
+                                        <p class="mb-1" style="font-size: .85em;">baik banget saunders. kalau dimari mah mana mungkin ngaku salah wkkw</p>
+                                        <div class="d-flex justify-content-start">
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-0">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_up</span> <span style="font-size: .9em;">87</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm d-flex align-items-center px-1 ml-1">
+                                                <span class="material-icons text-dark mr-2" style="font-size: 1.2em;">thumb_down</span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm" style="font-size: .8em;font-weight: 500;">
+                                                Balas
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 pr-0">
+                    <div class="row" id="rightSide">
+                        <div class="col-12 mb-2">
+                            <div class="card" style="border-radius: 1em;position: relative;overflow: hidden;">
+                                <div class="card-body p-0" id="faceExp">
+                                    <video id="video" width="100%" autoplay muted></video>
+                                    <canvas id="overlay" style="position: absolute;width: 100%;height: 100%;top:0;left: 0;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card" style="border-radius: 1em;overflow: hidden;border: none;background-color: #e0e0e0;">
+                                <div class="card-body pb-3">
+                                    <div class="row">
+                                        <div class="col-12 row d-flex align-items-center mb-2">
+                                            <div class="col-2">
+                                                <img src="/assets/angry.svg" alt="angry" style="width: 100%;">
+                                            </div>
+                                            <div class="col-10 p-0">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-new" id="angry" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 row d-flex align-items-center mb-2">
+                                            <div class="col-2">
+                                                <img src="/assets/disgusted.svg" alt="angry" style="width: 100%;">
+                                            </div>
+                                            <div class="col-10 p-0">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-new" id="disgusted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 row d-flex align-items-center mb-2">
+                                            <div class="col-2">
+                                                <img src="/assets/fearful.svg" alt="angry" style="width: 100%;">
+                                            </div>
+                                            <div class="col-10 p-0">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-new" id="fearful" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 row d-flex align-items-center mb-2">
+                                            <div class="col-2">
+                                                <img src="/assets/happy.svg" alt="angry" style="width: 100%;">
+                                            </div>
+                                            <div class="col-10 p-0">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-new" id="happy" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 row d-flex align-items-center mb-2">
+                                            <div class="col-2">
+                                                <img src="/assets/neutral.svg" alt="angry" style="width: 100%;">
+                                            </div>
+                                            <div class="col-10 p-0">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-new" id="neutral" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 row d-flex align-items-center mb-2">
+                                            <div class="col-2">
+                                                <img src="/assets/sad.svg" alt="angry" style="width: 100%;">
+                                            </div>
+                                            <div class="col-10 p-0">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-new" id="sad" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 row d-flex align-items-center mb-2">
+                                            <div class="col-2">
+                                                <img src="/assets/surprised.svg" alt="angry" style="width: 100%;">
+                                            </div>
+                                            <div class="col-10 p-0">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-new" id="surprised" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-12 mt-3">
+                                <div class="card" style="border: none;">
+                                    <div class="card-body py-0">
+                                        <div class="row">
+                                            <div class="col-4 p-0">
+                                                <div class="card" style="border-radius: 1em;overflow: hidden;border: none;">
+                                                    <img src="https://i.ytimg.com/vi/NJG-VfhXDuY/hqdefault.jpg" alt="thumbnail">
+                                                </div>
+                                            </div>
+                                            <div class="col-8 px-2 pt-0">
+                                                <p class="truncate-new mb-0" style="font-weight: 500;">BARU! Indomie Ramen Series Rasanya
+                                                    Otentik Jepang</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">Indomie</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">40jt x ditonton · 1 bulan yang lalu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="card" style="border: none;">
+                                    <div class="card-body py-0">
+                                        <div class="row">
+                                            <div class="col-4 p-0">
+                                                <div class="card" style="border-radius: 1em;overflow: hidden;border: none;">
+                                                    <img src="https://i.ytimg.com/vi/rRh1nK5obtg/hqdefault.jpg" alt="thumbnail">
+                                                </div>
+                                            </div>
+                                            <div class="col-8 px-2 pt-0">
+                                                <p class="truncate-new mb-0" style="font-weight: 500;">Indomie, Hangatkan Lebaran
+                                                    #SederhanaPenuhArti</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">Indomie</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">5,4jt x ditonton · 1 bulan yang lalu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="card" style="border: none;">
+                                    <div class="card-body py-0">
+                                        <div class="row">
+                                            <div class="col-4 p-0">
+                                                <div class="card" style="border-radius: 1em;overflow: hidden;border: none;">
+                                                    <img src="https://i.ytimg.com/vi/Hc0i8rf7rF8/hqdefault.jpg" alt="thumbnail">
+                                                </div>
+                                            </div>
+                                            <div class="col-8 px-2 pt-0">
+                                                <p class="truncate-new mb-0" style="font-weight: 500;">Kebaikan #SederhanaPenuhArti Ramadan
+                                                    Indomie</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">Indomie</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">32jt x ditonton · 2 bulan yang lalu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="card" style="border: none;">
+                                    <div class="card-body py-0">
+                                        <div class="row">
+                                            <div class="col-4 p-0">
+                                                <div class="card" style="border-radius: 1em;overflow: hidden;border: none;">
+                                                    <img src="https://i.ytimg.com/vi/5z__H5FBrxw/hqdefault.jpg" alt="thumbnail">
+                                                </div>
+                                            </div>
+                                            <div class="col-8 px-2 pt-0">
+                                                <p class="truncate-new mb-0" style="font-weight: 500;">Semangat Menginspirasi Indomie</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">Indomie</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">27jt x ditonton · 5 bulan yang lalu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="card" style="border: none;">
+                                    <div class="card-body py-0">
+                                        <div class="row">
+                                            <div class="col-4 p-0">
+                                                <div class="card" style="border-radius: 1em;overflow: hidden;border: none;">
+                                                    <img src="https://i.ytimg.com/vi/QvAVxrK_D30/hqdefault.jpg" alt="thumbnail">
+                                                </div>
+                                            </div>
+                                            <div class="col-8 px-2 pt-0">
+                                                <p class="truncate-new mb-0" style="font-weight: 500;">Ayo Cobain Inovasi Rasa Indomie HypeAbis
+                                                    Kebab Rendang!</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">Indomie</p>
+                                                <p style="font-size: .9em;" class="text-secondary mb-0">91jt x ditonton · 7 bulan yang lalu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script defer src="/js/face-api.min.js"></script>
+    <script defer src="/js/watch.js"></script>
+
+    <!-- Main Body Ends -->
+</body>
+
+</html>
